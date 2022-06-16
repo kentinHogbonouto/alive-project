@@ -1,0 +1,170 @@
+:root{
+  --primary-color:#FFFF00;
+  --secondary-color: #0000FF;
+  --secondary-color-light: #87CEEB;
+}
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 1rem;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  a {
+    text-decoration: none !important;
+  }
+
+
+  /******************************************
+                Header - Navbar
+  ******************************************/
+  #header .navbar .navbar-nav .nav-link {
+    font: normal normal 600 15px/14px Poppins;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin: 0.5rem;
+  }
+  #header .navbar .navbar-nav .icon-market img {
+    max-width: 20px;
+    margin-top: 10px;
+  }
+  #header .navbar .navbar-nav .icon-market-search img {
+    max-width: 18px;
+    margin-top: 12px;
+  }
+
+  /******************************************
+                Banner
+  ******************************************/
+  #banner .carousel-inner{
+    position: relative;
+    background-size: cover;
+    z-index: -999;
+  }
+  #banner .carousel-inner span {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal normal 600 15px/22px Poppins;
+    padding: 3rem 5rem;
+    margin: 0 auto;
+    letter-spacing: 0px;
+    color: #5D5D5D;
+    opacity: 1;
+    z-index: 999;
+  }
+  #banner .carousel-inner h1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal normal 600 54px/14px Poppins;
+    padding: 6rem 5rem;
+    margin: 0 auto;
+    letter-spacing: 0px;
+    color: #5D5D5D;
+    opacity: 1;
+    z-index: 999;
+  }
+  #banner .carousel-inner .btn-slide {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal normal 600 15px/22px Poppins;margin: 0rem 5rem;
+    color: #5D5D5D;
+    border: 2px solid #989898;
+    border-radius: 21px;
+    bottom: 80px;
+    opacity: 1;
+    z-index: 999;
+  }
+
+
+  /******************************************
+                Features
+  ******************************************/
+  
+  #features .feature-img {
+    position: relative;
+  }
+  #features .feature-content {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 3;
+  }
+  #features .feature-content h3 {
+    font: normal normal 600 54px/14px Poppins;
+    letter-spacing: 0px;
+    color: #5D5D5D;
+    opacity: 1;
+  }
+  #features .feature-content span {
+    margin-bottom: 2rem;
+    font: normal normal 600 15px/22px Poppins;
+    letter-spacing: 0px;
+    color: #5D5D5D;
+    opacity: 1;
+  }
+  #features .feature-content .btn-more {
+    margin-top: 25rem;
+    font: normal normal 600 15px/22px Poppins;
+    color: #5D5D5D;
+    border: 1px solid #989898;
+    border-radius: 21px;
+    opacity: 1;
+  }
+  /*categorie intermediaire*/
+  .bg-article{
+    height: 250px;
+    background: center / cover no-repeat url(./images/feature-1.jpg);
+  }
+  .bg-fiche-produit{
+    background: center / cover no-repeat url(./images/feature-1.jpg);
+    height: 80vh !important;
+  }
+  .features-bg-color{
+    background-color: var(--primary-color) !important;
+  }
+  /*rond*/
+  .rond-one{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+  }
+  .rond-two{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+  }
+  .rond-three{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--secondary-color-light);
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: #fff !important;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    color: #000000 !important;
+  }
