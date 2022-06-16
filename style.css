@@ -168,3 +168,100 @@
     box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
     color: #000000 !important;
   }
+
+  /*********************************
+        footer
+*********************************/
+#footer {
+  background: #EFEFEF;
+}
+
+#footer h2 {
+  font: normal normal 600 32px/42px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+}
+#footer .btn-about {
+  border: 1px solid #989898;
+  border-radius: 19px;
+}
+#footer .form-control {
+  background: #e5e5e5;
+  border: none;
+  border-radius: 0px;
+  height: 50px;
+}
+#footer .input-group-text {
+  border: none;
+  border-radius: 0px;
+  background: #00B2FF;
+  font: normal normal 600 15px/14px Poppins;
+  color: #ffffff;
+}
+
+#footer .halls,
+#footer .terms, 
+#footer .social {
+  list-style: none;
+  padding: 0;
+}
+
+#footer .halls li a {
+  font: normal normal 600 15px/30px Poppins;
+  letter-spacing: 0px;
+  color: #000000;
+}
+#footer .infos {
+  border: 1px solid #707070;
+  border-radius: 16px;
+}
+#footer .infos h4 {
+  font: normal normal 600 15px/30px Poppins;
+}
+#footer .infos h3 {
+  font: normal normal normal 16px/16px Poppins;
+}
+#footer .infos .address, 
+#footer .infos .phone, 
+#footer .infos .ref {
+  padding: 1.5rem 2rem 0rem;
+}
+
+#footer .halls li,
+#footer .terms li {
+  margin-bottom: 0.5rem;
+}
+#footer .terms li a {
+  font: normal normal normal 15px/30px Poppins;
+  color: #989898;
+}
+#footer .terms h5 {
+  font: normal normal 600 15px/30px Poppins;
+  margin-top: 3rem !important;
+}
+#footer .social li {
+  display: inline-block;
+  margin: 1rem;
+}
+#footer .social li:nth-child(1) {
+  margin-left: 0px !important;
+}
+#footer .social li a .icon {
+  color: #000000;
+  font-size: 1.2rem;
+} 
+#footer .toggle-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: #C6C6C6;
+  float: inline-end;
+}
+#footer .toggle-top img {
+  max-width: 100%;
+  width: 20px;
+  max-height: 100%;
+}
