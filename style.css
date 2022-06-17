@@ -43,8 +43,10 @@
     position: --webkit-sticky;
     top: 0;
     background: #ffffff;
+    border-bottom: 1px solid #f1f1f1;
   }
 
+  
 
   /*****************************************
             Search BAr
@@ -549,7 +551,264 @@
   padding-top: 0.5rem;
 }
 
+/********************CATALOG Chaises********************/
+#catalog .widget-area {
+  border-right: 1px solid #e6e6e6;
+}
+#catalog .widget-one {
+  margin-bottom: 3rem;
+}
+#catalog .widget-one .title-widget,
+#catalog .widget-two .title-widget,
+#catalog .widget-three .title-widget,
+#catalog .widget-four .title-widget {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+#catalog .widget-one h5,
+#catalog .widget-two h5,
+#catalog .widget-three h5,
+#catalog .widget-four h5{
+  font: normal normal 600 15px/22px Poppins;
+  padding: 0.8rem 0;
+  margin-bottom: 0;
+}
+#catalog .widget-one ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#catalog .widget-one ul li {
+ display: inline-block;
+ margin-top: 0.5rem;
+}
 
+#catalog .widget-one ul li a {
+  border: 1px solid #000000;
+  border-radius: 18px;
+}
+
+#catalog .widget-two .form-control {
+  position: relative;
+  border: 1px solid #C6C6C6;
+  border-radius: 19px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#catalog .widget-two .icon-search {
+  position: absolute;
+  color: #5D5D5D;
+  bottom: 14rem;
+  left: 23rem;
+  z-index: 999;
+}
+
+
+#catalog .widget-three ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.4rem;
+}
+#catalog .widget-three ul li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+}
+#catalog .widget-three ul li.black {
+  background: #FF000090;
+}
+#catalog .widget-three ul li.blue {
+  background: #00A7FF7B;
+}
+#catalog .widget-three ul li.yellow {
+  background: #F5FF00D3;
+}
+#catalog .widget-three ul li.white {
+  background: #F5FF00D3;
+}
+#catalog .widget-three ul li.cyan {
+  background: #00FF93B1;
+}
+#catalog .widget-three ul li.orange {
+  background: #6C6C6C;
+}
+#catalog .widget-three ul li.purple {
+  background: #FFFFFF;
+}
+#catalog .widget-three ul li.indigo {
+  background: #A700FF;
+}
+#catalog .widget-three ul li.loom {
+  background: #FFB100;
+}
+#catalog .widget-three ul li.alice {
+  background: #694400;
+}
+#catalog .widget-four .label label {
+  font: normal normal normal 12px/22px Poppins;
+  color: #C6C6C6;
+}
+#catalog .widget-four .form-rang {
+  height: 1rem !important;
+}
+
+#catalog .wrap-shop h2 {
+  font: normal normal 600 54px/14px Poppins;
+  margin-bottom: 2rem;
+}
+#catalog .wrap-shop .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+#catalog .wrap-shop .back-link {
+  font-size: 1.3rem;
+}
+#catalog .filter-shop-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#catalog .filter-shop-box .form-wrap {
+  float: right !important;
+}
+#catalog .filter-shop-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#catalog .filter-shop-box ul li {
+  display: inline-block;
+}
+#catalog .filter-shop-box ul li a {
+  padding: 0.2rem 0.8rem 0.4rem;
+  color: #C6C6C6;
+  border: 1px solid #C6C6C6;
+  border-radius: 18px;
+}
+#catalog .filter-shop-box .form-select {
+  font: normal normal normal 12px/22px Poppins;
+  background: #EBEBEB;
+  width: 180px;
+  min-height: 40px;
+  color: rgb(136 , 136, 136);
+  border: none;
+  border-radius: 18px;
+  z-index: 999;
+}
+#catalog .filter-shop-box .form-select option {
+  font: normal normal normal 12px/22px Poppins;
+  background: #EBEBEB;
+  border: none !;
+}
+#catalog .filter-shop-box .form-select:focus {
+  outline: 0 !important;
+  box-shadow: none;
+  border: 1px solid #13130d;
+}
+
+#catalog .wrap-shop .product-cart-wrap {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 25px;
+  overflow: hidden;
+}
+#catalog .wrap-shop .product-img-action {
+  position: relative;
+  background-color: #fff;
+  padding: 10px 12px;
+  overflow: hidden;
+}
+#catalog .wrap-shop .product-img-action img {
+  border-radius: 25px;
+}
+#catalog .wrap-shop .product-action {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease 0s;
+  z-index: 9;
+}
+#catalog .wrap-shop .product-action img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  line-height: 44px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  text-align: center;
+  border: 1px solid #cce7d0;
+}
+
+#catalog .wrap-shop .product-cart-wrap:hover .product-img-action .product-action {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#catalog .wrap-shop .product-bagde {
+  position: absolute;
+  right: 20px;
+  top: 19px;
+  margin: 0.4rem 0.8rem;
+  border-radius: 20px !important;
+  z-index: 9;
+}
+#catalog .wrap-shop .product-bagde span {
+  color: #fff;
+  background: #000;
+  padding: 0.2rem 0.7rem;
+  border-radius: 15px;
+}
+#catalog .wrap-shop .product-content {
+  padding: 0 20px 15px 20px;
+}
+#catalog .wrap-shop .product-content .item-name {
+  font: normal normal 600 15px/22px Poppins;
+}
+#catalog .wrap-shop .product-content .item-para {
+  font: normal normal normal 12px/18px Poppins;
+  margin-top: 0.5rem;
+  color: #C6C6C6;
+}
+#catalog .wrap-shop .product-content .items-more .color ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#catalog .wrap-shop .product-content .items-more .color ul li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+}
+#catalog .wrap-shop .product-content .items-more .color ul li.yellow {
+  background: #FAC752;
+}
+#catalog .wrap-shop .product-content .items-more .color ul li.blue {
+  background: #6594FF;
+}
+#catalog .wrap-shop .product-content .items-more .color ul li.cyan {
+  background: #8EE2E5;
+}
+#catalog .wrap-shop .product-content .items-more .price {
+  font: normal normal 600 15px/22px Poppins;
+  color: #000000;
+}
 
 
 
