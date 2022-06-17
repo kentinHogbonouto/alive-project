@@ -1,269 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alive - Home</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="font/css/all.min.css" />
-    <link rel="stylesheet" href="css/theme.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main>
-      <header id="header" class="header">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"
-              ><img src="images/logo.JPG" class="img-fluid" alt="logo"
-            /></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarNav"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Catalogue</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Nouveautés</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Eco-Green</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Inspiration</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Agenda</a>
-                </li>
-                <li class="nav-item">
-                  <a class="icon-market" href="#">
-                    <img src="images/shopping.png" class="img-fluid" alt="" />
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="icon-market-search" href="#">
-                    <img
-                      src="images/search.png"
-                      class="img-fluid ml-4"
-                      alt=""
-                    />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <section id="features" class="py-4">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alive - Catalogue</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="font/css/all.min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+  <main>
+    <header id="header" class="header sticky-top">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <div class="row mb-4">
-            <div class="col-lg-6">
-              <div class="feature-single">
-                <div class="feature-img">
-                  <img src="images/feature-1.jpg" class="img-fluid" alt="" />
-                  <div class="feature-content">
-                    <span>Découvrir</span>
-                    <h3>Nouveautés</h3>
-                    <a href="#" class="btn btn-more">Découvrir</a>
+          <a class="navbar-brand" href="index.html"><img src="images/logo.JPG" class="img-fluid" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="catalogue.html">Catalogue</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nouveautés</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Eco-Green</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inspiration</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Agenda</a>
+              </li>
+              <li class="nav-item">
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <h3>Mon Panier</h3>
+                </div>
+                <a class="icon-market" onclick="openNav()">
+                  <img src="images/shopping.png" class="img-fluid" alt="">
+                </a>
+              </li>
+              <li class="nav-item">
+                <div id="myOverlay" class="overlay">
+                  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                  <div class="overlay-content">
+                    <form action="#">
+                      <input type="text" placeholder="Recherche...">
+                      <a href="#"><i class="fas fa-arrow-right icon-search"></i></a>
+                    </form>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="feature-single">
-                <div class="feature-img">
-                  <img src="images/feature-2.jpg" class="img-fluid" alt="" />
-                  <div class="feature-content">
-                    <span>Sélection</span>
-                    <h3>Be-Engaged</h3>
-                    <a href="#" class="btn btn-more">Découvrir</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mb-4">
-            <div class="col-lg-6">
-              <div class="feature-single">
-                <div class="feature-img">
-                  <img src="images/feature-1.jpg" class="img-fluid" alt="" />
-                  <div class="feature-content">
-                    <span>Découvrir</span>
-                    <h3>Nouveautés</h3>
-                    <a href="#" class="btn btn-more">Découvrir</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="feature-single">
-                <div class="feature-img">
-                  <img src="images/feature-2.jpg" class="img-fluid" alt="" />
-                  <div class="feature-content">
-                    <span>Sélection</span>
-                    <h3>Be-Engaged</h3>
-                    <a href="#" class="btn btn-more">Découvrir</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mb-4">
-            <div class="col-lg-6">
-              <div class="feature-single">
-                <div class="feature-img">
-                  <img src="images/feature-1.jpg" class="img-fluid" alt="" />
-                  <div class="feature-content">
-                    <span>Découvrir</span>
-                    <h3>Nouveautés</h3>
-                    <a href="#" class="btn btn-more">Découvrir</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="feature-single">
-                <div class="feature-img">
-                  <img src="images/feature-2.jpg" class="img-fluid" alt="" />
-                  <div class="feature-content">
-                    <span>Sélection</span>
-                    <h3>Be-Engaged</h3>
-                    <a href="#" class="btn btn-more">Découvrir</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="feature-single">
-                <div class="feature-img">
-                  <img src="images/feature-1.jpg" class="img-fluid" alt="" />
-                  <div class="feature-content">
-                    <span>Découvrir</span>
-                    <h3>Nouveautés</h3>
-                    <a href="#" class="btn btn-more">Découvrir</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="feature-single">
-                <div class="feature-img">
-                  <img src="images/feature-2.jpg" class="img-fluid" alt="" />
-                  <div class="feature-content">
-                    <span>Sélection</span>
-                    <h3>Be-Engaged</h3>
-                    <a href="#" class="btn btn-more">Découvrir</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <a class="icon-market-search openBtn" onclick="openSearch()">
+                  <img src="images/search.png" class="img-fluid ml-4" alt="">
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-      <footer id="footer" class="py-7">
-        <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-lg-6">
-              <h2>Le group Alive</h2>
-              <h2>Qui sommes nous ?</h2>
-              <a href="#" class="btn btn-about mt-2">A propos</a>
-            </div>
-            <div class="col-lg-6">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Votre E-mail">
-                <span class="input-group-text">S'inscrire</span>
-              </div>
-            </div>
-          </div>
-          <div class="row pt-10">
-            <div class="col-lg-2">
-              <ul class="halls">
-                <li><a href="#">Lille</a></li>
-                <li><a href="#">Paris Nord</a></li>
-                <li><a href="#">Paris Sud</a></li>
-                <li><a href="#">Angera</a></li>
-                <li><a href="#">Lyon</a></li>
-                <li><a href="#">Cannes</a></li>
-                <li><a href="#">Louisiane</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3">
-              <div class="infos">
-                <div class="address">
-                  <h4>Agence de Lille</h4>
-                  <p>119 chaussée Marcelin Berthelot 59200 Tourcoing</p>
-                </div>
-                <div class="phone">
-                  <h4>+33(0)3 20 11 29 29</h4>
-                </div>
-                <div class="ref">
-                  <h3>Votre contact référence:</h3>
-                  <p>Remy RIGGI <br> r.riggi@alive-exhibition.fr <br> 06 46 24 80 48</p>
-                </div>
-              </div>
-            </div>
-            <div class="offset-1 col-lg-3">
-              <ul class="terms">
-                <li><a href="#">Notre politique RSE</a></li>
-                <li><a href="#">Nos Engagement</a></li>
-                <li><a href="#">Nos valeurs</a></li>
-                <li><a href="#">Mentions légales</a></li>
-              </ul>
-              <h5>Nous suivre</h5>
-              <ul class="social">
-                <li><a href="#"><i class="fab fa-facebook icon"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin icon"></i></a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3">
-              <ul class="terms">
-                <li><a href="#">Actualités et revue de Presse</a></li>
-                <li><a href="#">Banque d'image</a></li>
-                <li><a href="#">FAQ</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="row pt-10">
-            <div class="col-lg-6 d-flex align-items-center">
-              <p>Alive Group - All Right Reserved ©2022</p>
-            </div>
-            <div class="col-lg-6">
-              <div class="toggle-top float-end">
-                <img src="images/up-arrow.png" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </main>
+      </nav>
+    </header>
 
-    <!-----------Script Js------------>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="font/js/all.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <section id="catalogue-title" class="py-7">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Catalogue</h1>
+            <a href="catalogue.html" class="btn btn-filter">catalogue <i class="fas fa-close ml-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="py-7">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="catalog-single">
+              <div class="catalog-img">
+                <img src="images/h5-img-1.jpg" class="img-fluid" alt="">
+                <h3>Assises</h3>
+                <div class="catalog-content">
+                  <div class="container">
+                      <div class="details">
+                        <ul>
+                          <li><a href="#">Chaises Chauffeuses</a></li>
+                          <li><a href="#">Canapés</a></li>
+                          <li><a href="#">Lounge Tabourets Bancs</a></li>
+                          <li><a href="#">banquettes et poufs</a></li>
+                        </ul>
+                      </div>
+                      <div class="arrow">
+                        <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="discovery"></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="catalog-single">
+              <div class="catalog-img">
+                <img src="images/h5-img-2.jpg" class="img-fluid" alt="">
+                <h3>Tables</h3>
+                <div class="catalog-content">
+                  <div class="container">
+                      <div class="details">
+                        <ul>
+                          <li><a href="#">Standards   Bureaux et réunions</a></li>
+                          <li><a href="#">Basses</a></li>
+                          <li><a href="#">Bureaux et réunions</a></li>
+                        </ul>
+                      </div>
+                      <div class="arrow">
+                        <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="discovery"></a>
+                      </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="catalog-single">
+              <div class="catalog-img">
+                <img src="images/h5-img-3.jpg" class="img-fluid" alt="">
+                <h3>Ensembles</h3>
+                <div class="catalog-content">
+                  <div class="container">
+                      <div class="details">
+                        <ul>
+                          <li><a href="#">Standards Hauts</a></li>
+                          <li><a href="#">Hauts</a></li>
+                          <li><a href="#">Bas</a></li>
+                        </ul>
+                      </div>
+                      <div class="arrow">
+                        <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="discovery"></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="catalog-single">
+              <div class="catalog-img">
+                <img src="images/h5-img-4.jpg" class="img-fluid" alt="">
+                <h3>Comptoirs & conférenciers</h3>
+                <div class="catalog-content">
+                  <div class="container">
+                      <div class="details">
+                        <ul>
+                          <li><a href="#">Bars</a></li>
+                          <li><a href="#">Comptoirs</a></li>
+                          <li><a href="#">Desk</a></li>
+                          <li><a href="#">Pupitres</a></li>
+                        </ul>
+                      </div>
+                      <div class="arrow">
+                        <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="discovery"></a>
+                      </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="catalog-single">
+              <div class="catalog-img">
+                <img src="images/h5-img-2.jpg" class="img-fluid" alt="">
+                <h3>Rangements & vitrines</h3>
+                <div class="catalog-content">
+                  <div class="container">
+                      <div class="details">
+                        <ul>
+                          <li><a href="#">Étagères & Armoires </a></li>
+                          <li><a href="#">Meubles bas</a></li>
+                          <li><a href="#">Vitrines</a></li>
+                          <li><a href="#">Porte-Documents</a></li>
+                        </ul>
+                      </div>
+                      <div class="arrow">
+                        <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="discovery"></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="catalog-single">
+              <div class="catalog-img">
+                <img src="images/h5-img-4.jpg" class="img-fluid" alt="">
+                <h3>Accessoires</h3>
+                <div class="catalog-content">
+                  <div class="container">
+                      <div class="details">
+                        <ul>
+                          <li><a href="#">Luminaires</a></li>
+                          <li><a href="#">Cuisine & hygiène</a></li>
+                          <li><a href="#">Cloisons</a></li>
+                          <li><a href="#">Divers (déco, signalétique, accès bureau, parasols)</a></li>
+                        </ul>
+                      </div>
+                      <div class="arrow">
+                        <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="discovery"></a>
+                      </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="catalog-single">
+              <div class="catalog-img">
+                <img src="images/h5-img-1.jpg" class="img-fluid" alt="">
+                <h3>Nouveautés</h3>
+                <div class="catalog-content">
+                  <div class="container">
+                      <div class="details">
+                        <ul>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                        </ul>
+                      </div>
+                      <div class="arrow">
+                        <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="discovery"></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="catalog-single">
+              <div class="catalog-img">
+                <img src="images/h5-img-3.jpg" class="img-fluid" alt="">
+                <h3>Be-engaged</h3>
+                <div class="catalog-content">
+                  <div class="container">
+                      <div class="details">
+                        <ul>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                        </ul>
+                      </div>
+                      <div class="arrow">
+                        <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="discovery"></a>
+                      </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="py-7">
+      <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-6">
+            <h2>Le group Alive</h2>
+            <h2>Qui sommes nous ?</h2>
+            <a href="#" class="btn btn-about mt-2">A propos</a>
+          </div>
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Votre E-mail">
+              <span class="input-group-text">S'inscrire</span>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-10">
+          <div class="col-lg-2">
+            <ul class="halls">
+              <li><a href="#">Lille</a></li>
+              <li><a href="#">Paris Nord</a></li>
+              <li><a href="#">Paris Sud</a></li>
+              <li><a href="#">Angera</a></li>
+              <li><a href="#">Lyon</a></li>
+              <li><a href="#">Cannes</a></li>
+              <li><a href="#">Louisiane</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <div class="infos">
+              <div class="address">
+                <h4>Agence de Lille</h4>
+                <p>119 chaussée Marcelin Berthelot 59200 Tourcoing</p>
+              </div>
+              <div class="phone">
+                <h4>+33(0)3 20 11 29 29</h4>
+              </div>
+              <div class="ref">
+                <h3>Votre contact référence:</h3>
+                <p>Remy RIGGI <br> r.riggi@alive-exhibition.fr <br> 06 46 24 80 48</p>
+              </div>
+            </div>
+          </div>
+          <div class="offset-1 col-lg-3">
+            <ul class="terms">
+              <li><a href="#">Notre politique RSE</a></li>
+              <li><a href="#">Nos Engagement</a></li>
+              <li><a href="#">Nos valeurs</a></li>
+              <li><a href="#">Mentions légales</a></li>
+            </ul>
+            <h5>Nous suivre</h5>
+            <ul class="social">
+              <li><a href="#"><i class="fab fa-facebook icon"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin icon"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <ul class="terms">
+              <li><a href="#">Actualités et revue de Presse</a></li>
+              <li><a href="#">Banque d'image</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row pt-10">
+          <div class="col-lg-6 d-flex align-items-center">
+            <p>Alive Group - All Right Reserved ©2022</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="toggle-top float-end">
+              <img src="images/up-arrow.png" class="img-fluid" alt="toggle-top">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-----------Script Js------------>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="font/js/all.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

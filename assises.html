@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alive - Home</title>
+  <title>Alive - Catalogue</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="font/css/all.min.css">
   <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
@@ -40,7 +42,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Agenda</a>
               </li>
-
               <li class="nav-item">
                 <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -50,13 +51,12 @@
                   <img src="images/shopping.png" class="img-fluid" alt="">
                 </a>
               </li>
-
               <li class="nav-item">
                 <div id="myOverlay" class="overlay">
                   <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
                   <div class="overlay-content">
                     <form action="#">
-                      <input type="text" placeholder="Recherche..">
+                      <input type="text" placeholder="Recherche...">
                       <a href="#"><i class="fas fa-arrow-right icon-search"></i></a>
                     </form>
                   </div>
@@ -71,126 +71,76 @@
       </nav>
     </header>
 
-    <section id="banner">
-      <div class="container-fluid">
-        <div class="banner-inner">
-          <div class="row">
-            <div class="col-lg-12">
-              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <span>Voir</span>
-                  <h1>Catalogue Produits</h1>
-                  <a href="#" class="btn btn-slide">Découvrir</a>
-                  <div class="carousel-item active">
-                    <img src="images/slide-1.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/slide-2.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/slide-3.jpg" class="d-block w-100" alt="...">
-                  </div> 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="py-4" >
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="feature-single">
-              <div class="feature-img">
-                <img src="images/feature-1.jpg" class="img-fluid" alt="">
-                <div class="feature-content">
-                  <span>Découvrir</span>
-                  <h3>Nouveautés</h3>
-                  <a href="#" class="btn btn-more">Découvrir</a>
-                </div>
-              </div>
-            </div>
-          </div> 
-          <div class="col-lg-6">
-            <div class="feature-single">
-              <div class="feature-img">
-                <img src="images/feature-2.jpg" class="img-fluid" alt="">
-                <div class="feature-content">
-                  <span>Sélection</span>
-                  <h3>Be-Engaged</h3>
-                  <a href="#" class="btn btn-more">Découvrir</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="feature-inner" class="pb-4">
+    <section id="catalogue-title" class="py-7">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-            <div class="feature-inner-single">
-              <div class="feature-img">
-                <img src="images/h5-slide-1.jpg" class="img-fluid" alt="">
-                <div class="feature-content">
-                  <span>Découvrir</span>
-                  <h3>Inspirations & Réalisations</h3>
-                  <a href="#" class="btn btn-more">Découvrir</a>
-                </div>
-              </div>
-            </div>
+            <h1>Assises</h1>
+            <a href="catalogue.html" class="btn btn-filter">Catalogue <i class="fas fa-close ml-2"></i></a>
+            <a href="assises.html" class="btn btn-filter">Assises <i class="fas fa-close ml-2"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="features-two" class="pb-4" >
+    <section id="assises" class="py-7">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="feature-single">
-              <div class="feature-img-agenda">
-                <img src="images/feature-two-1.jpg" class="img-fluid" alt="">
-                <div class="feature-content">
-                  <span>Agenda</span>
-                  <h3>Nous sommes présents sur ces dates</h3>
-                  <a href="#" class="btn btn-more">Découvrir</a>
+        <div class="row owl-carousel owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="col-lg-3 owl-item">
+                      <div class="assises-img">
+                        <img src="images/a-1.jpg" class="img-fluid" alt="">
+                        <div class="assises-content">
+                          <h3>Chaises</h3>
+                          <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="shop-alive-cataloge"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 owl-item">
+                      <div class="assises-img">
+                        <img src="images/a-2.jpg" class="img-fluid" alt="">
+                        <div class="assises-content">
+                          <h3>Fauteuil</h3>
+                          <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="shop-alive-cataloge"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 owl-item">
+                      <div class="assises-img">
+                        <img src="images/a-3.jpg" class="img-fluid" alt="">
+                        <div class="assises-content">
+                          <h3>Canapés & Lounge</h3>
+                          <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="shop-alive-cataloge"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 owl-item">
+                      <div class="assises-img">
+                        <img src="images/a-4.jpg" class="img-fluid" alt="">
+                        <div class="assises-content">
+                          <h3>Tabourets & Tabourets <br> de bar</h3>
+                          <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="shop-alive-cataloge"></a>
+                        </div>
+                      </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="feature-single">
-              <div class="feature-img">
-                <img src="images/feature-two-2.jpg" class="img-fluid" alt="">
-                <div class="feature-content">
-                  <span>Outils</span>
-                  <h3>Banque d’image <br> & 3D</h3>
-                  <a href="#" class="btn btn-more">Découvrir</a>
-                </div>
-              </div>
+            <div class="owl-nav">
+              <div class="owl-prev"><i class="fas fa-chevron-left"></i></div>
+              <div class="owl-next"><i class="fas fa-chevron-right"></i></div>
             </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <footer id="footer" class="py-4">
+    <footer id="footer" class="py-7">
       <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-6">
             <h2>Le group Alive</h2>
             <h2>Qui sommes nous ?</h2>
-            <a href="#" class="btn btn-about mt-2 mb-2">A propos</a>
+            <a href="#" class="btn btn-about mt-2">A propos</a>
           </div>
           <div class="col-lg-6">
             <div class="input-group">
@@ -263,9 +213,19 @@
 
   </main>
 
+
+  <!-----------Plugin Owl Carousel------->
+
+ <script type="text/javascript">
+   $(document).ready(function(){
+    $(".owl-carousel").owlCarousel();
+  });
+ </script>
+
   <!-----------Script Js------------>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="font/js/all.min.js"></script>
   <script src="js/main.js"></script>
 </body>
