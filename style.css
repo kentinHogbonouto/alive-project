@@ -417,64 +417,163 @@
 #assises .owl-theme .owl-nav {
   text-align: left !important;
 }
-/********************************
-        categorie filtre
-********************************/
-/*categorie intermediaire*/
-.bg-article{
-  height: 250px;
-  background: center / cover no-repeat url(./images/feature-1.jpg);
+
+
+
+/*****************SINGLE PRODUCT***************/
+#single-product .wrap-info .price {
+  position: relative;
+  margin-top: 2rem;
 }
-.bg-fiche-produit{
-  background: center / cover no-repeat url(./images/feature-1.jpg);
-  height: 79vh !important;
+#single-product .wrap-info .price .form-select {
+  position: relative;
+  border: none;
+  width: 130px;
+  font: normal normal normal 12px/22px Poppins;
+  background: #FFECB7;
+  border-radius: 18px;
 }
-.features-bg-color{
-  background-color: var(--primary-color) !important;
+#single-product .wrap-info .price .form-select:focus {
+  outline: 0;
+  box-shadow: none;
 }
-.btn-outline--gray{
-  border: 1px solid #e5e5e5 !important;
-  border-radius: 22px !important;
-  margin-bottom: 7px;
+#single-product .wrap-info .price .list-down {
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+  z-index: 999;
 }
-/*rond*/
-.rond-one{
+#single-product .wrap-info .link-price {
+  width: 110px;
+  height: 40px;
+  line-height: 24px;
+  border: 1px solid #000000;
+  border-radius: 21px;  
+  margin-top: 1rem;
+}
+#single-product .filtre {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#single-product .filtre .arrow img {
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  padding: 2px 3px 0;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+}
+
+#single-product .filtre .btn-filter {
+  border: 1px solid #C6C6C6;
+  border-radius: 18px;
+}
+#single-product .more ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#single-product .right.color ul {
+  list-style: none;
+  padding: 0;
+}
+#single-product .right.color ul li {
+  display: inline-block;
+  margin: 0.5rem;
   width: 15px;
   height: 15px;
+  border-radius: 59%;
+}
+#single-product .right.color ul li.yellow {
+  background-color: yellow;
+}
+#single-product .right.color ul li.blue {
+  background-color: blue;
+}
+#single-product .right.color ul li.green {
+  background-color: green;
+}
+#single-product .right.color ul li.red {
+  background-color: red;
+}
+#single-product .right.color ul li:nth-child(1) {
+  margin-left: 0px !important;
+}
+
+#single-product .pull-right h1 {
+  font: normal normal 600 32px/14px Poppins;
+}
+#single-product .pull-right h4 {
+  font: normal normal 600 20px/14px Poppins;
+  margin-top: 1.5rem;
+}
+#single-product .pull-right p {
+  font: normal normal normal 15px/22px Poppins;
+  margin-top: 1.5rem;
+}
+
+#single-product .download img {
+  max-width: 100%;
+  width: 20px;
+  max-height: 100%;
+}
+#single-product .download a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  border: 1px solid #5D5D5D;
   border-radius: 50%;
-  background-color: var(--primary-color);
 }
-.rond-two{
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: var(--secondary-color);
+
+#single-product .pull-right .wrap-info {
+  margin-top: 1.5rem;
 }
-.rond-three{
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: var(--secondary-color-light);
+#single-product .pull-right .wrap-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.accordion-button:not(.collapsed) {
-  background-color: #fff !important;
-  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
-  color: #000000 !important;
+#single-product .pull-right .wrap-info ul li {
+  padding-top: 0.5rem;
 }
-.accordion-button::after {
-  background-image: url(./images/plus.png) !important;
-}
-.accordion-button:not(.collapsed)::after {
-	background-image: url(./images/minus.png) !important;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*********************************
         footer
 *********************************/
 #footer {
   background: #EFEFEF;
 }
-
-#footer h2 {
+#footer .title {
+  margin-top: 2rem;
+}
+#footer .title h2 {
   font: normal normal 600 32px/42px Poppins;
   letter-spacing: 0px;
   color: #000000;
@@ -708,6 +807,9 @@
   }
   #catalog .catalog-single {
     margin-bottom: 3rem;
+  }
+  #catalog h3{
+    font: normal normal 600 30px/14px Poppins;
   }
 }
 
