@@ -632,6 +632,8 @@
 
 /********************CATALOG Chaises********************/
 #catalog .widget-area {
+  position: sticky;
+  overflow-x: hidden;
   border-right: 1px solid #e6e6e6;
 }
 
@@ -665,9 +667,6 @@
   width: 20px !important;
   max-height: 100% !important;
 }
-
-
-
 
 #catalog .widget-one h5,
 #catalog .widget-two h5,
@@ -816,7 +815,6 @@ input[type=range]::-ms-thumb {
   height: 1px;
   width: 100% !important;
 }
-
 
 #catalog .wrap-shop h2 {
   font: normal normal 600 54px/14px Poppins;
