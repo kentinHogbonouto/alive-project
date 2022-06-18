@@ -18,7 +18,7 @@
   <main>
     <header id="header" class="header sticky-top top">
       <nav class="navbar navbar-expand-lg">
-        <div class="container">
+        <div class="container-fluid">
           <a class="navbar-brand" href="index.html"><img src="images/logo.JPG" class="img-fluid" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -72,7 +72,7 @@
     </header>
 
     <section id="single-product" class="single-product py-11">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 col-xs-12">
             <div class="row">
@@ -82,7 +82,7 @@
                     <img src="images/arrow-left.png" class="img-fluid" alt="">
                   </div>
                   <div class="list-filter">
-                    <a href="catalogue.html" class="btn btn-filter">Catalogue <i class="fas fa-close ml-2"></i></a>
+                    <a href="catalogue.html" class="btn btn-filter">Catalogue</a>
                     <a href="assises.html" class="btn btn-filter">Assises <i class="fas fa-close ml-2"></i></a>
                     <a href="catalogue.html" class="btn btn-filter">Chaises <i class="fas fa-close ml-2"></i></a>
                     <a href="assises.html" class="btn btn-filter">Starck <i class="fas fa-close ml-2"></i></a>
@@ -91,10 +91,53 @@
               </div>
             </div>
             <div class="img-container">
-              <img src="images/single-product.jpg" class="img-fluid" alt="">
+              <div class="ecommerce-gallery">
+                <div class="row py-3">
+                  <div class="col-3">
+                    <ul class="image-list">
+                      <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp"
+                      data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp"
+                      alt="Gallery image 1"
+                      class="active mb-2" onclick="myFunction(this)" />
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
+                      data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
+                      alt="Gallery image 2"
+                      class="mb-2" onclick="myFunction(this)"
+                    />
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp"
+                      data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp"
+                      alt="Gallery image 3"
+                      class="mb-2" onclick="myFunction(this)"
+                    />
+                   
+                    </ul>
+                    
+                  </div>
+                  <div class="col-8 mb-1">
+                      <img id="imageBox"
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/14a.webp"
+                        alt="Gallery image 1"
+                        class="img-first active"
+                      />
+                  </div>
+                  <div class="col-1">
+                    <div class="product-bagde">
+                      <span>New</span>
+                    </div>
+                    <div class="download ml-3 mt-4">
+                      <a href="#"><img src="images/link.png" class="img-fluid" alt="download"></a>
+                      <a href="#"><img src="images/cube.png" class="img-fluid" alt="download"></a>
+                      <a href="#"><img src="images/image.png" class="img-fluid" alt="download"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-5 offset-1 col-xs-12 flex-sm-reverse">
+          <div class="col-lg-5 offset-1 col-xs-12">
             <div class="pull-right">
               <h1>Chaise HYPOLYTE</h1>
               <h4>Chaise outdoor plastique</h4>
@@ -243,7 +286,7 @@
           </div>
           <div class="col-lg-6">
             <div class="toggle-top float-end">
-              <a id="scrollUp" href="#top"><img src="images/up-arrow.png" class="img-fluid" alt="toggle-top"></a>
+              <img src="images/up-arrow.png" href="#top" class="img-fluid" alt="toggle-top">
             </div>
           </div>
         </div>

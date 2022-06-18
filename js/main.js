@@ -44,3 +44,12 @@ function closeNav() {
   document.body.style.backgroundColor = "white";
 }
 
+
+
+/*******************Single product*******************/
+
+function myFunction(smallImg) {
+  var fullImg = document.getElementById("imageBox");
+  fullImg.src = smallImg.src;
+}
+
