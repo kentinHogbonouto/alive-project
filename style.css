@@ -694,7 +694,9 @@
   border: 1px solid #000000;
   border-radius: 18px;
 }
-
+#catalog .widget-two form {
+  position: relative;
+}
 #catalog .widget-two .form-control {
   position: relative;
   border: 1px solid #C6C6C6;
@@ -702,10 +704,15 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-#catalog .widget-two .icon-search {
+#catalog .widget-two .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+#catalog .widget-two form .icon-search {
   position: absolute;
-  bottom: 52.7%;
-  left: 20%;
+  bottom: 30.7%;
+  left: 90%;
   z-index: 999;
   color: #000000;
 }
