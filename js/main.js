@@ -15,12 +15,11 @@ $('.owl-carousel').owlCarousel({
             items:3
         },
         1000:{
-            items:4
+            items:4,
+            nav:true,
         }
     }
 })
-
-
 
 
 /*******************Search Bar *******************/
@@ -31,8 +30,6 @@ function openSearch() {
 function closeSearch() {
   document.getElementById("myOverlay").style.display = "none";
 }
-
-
 
 /*******************Shop Bar *******************/
 function openNav() {
@@ -46,3 +43,4 @@ function closeNav() {
   document.getElementById("main").style.marginRight= "0";
   document.body.style.backgroundColor = "white";
 }
+

@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
+    
   <main>
     <header id="header" class="header sticky-top">
       <nav class="navbar navbar-expand-lg">
@@ -69,97 +70,182 @@
         </div>
       </nav>
     </header>
-    <section id="catalog" class="catalog py-11">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-3 widget-area">
-              <div class="widget-one">
-                <div class="title-widget justify-content-between d-flex">
-                  <h5>Marque</h5>
-                  <h4>-</h4>
-                </div>
-                <ul>
-                  <li><a href="#" class="btn btn-mark">Starck</a></li>
-                  <li><a href="#" class="btn btn-mark">Hay</a></li>
-                  <li><a href="#" class="btn btn-mark">Kartell</a></li>
-                  <li><a href="#" class="btn btn-mark">Veltex</a></li>
-                  <li><a href="#" class="btn btn-mark">Herman Miller</a></li>
-                  <li><a href="#" class="btn btn-mark">Muuto</a></li>
-                </ul>
-              </div>
-    
-              <div class="widget-two">
-                <div class="title-widget justify-content-between d-flex">
-                  <h5>Designers</h5>
-                  <h4>-</h4>
-                </div>
-                <form action="#">
-                  <input type="text" class="form-control" placeholder="Recherche..">
-                  <a href="#"><i class="fas fa-search icon-search"></i></a>
-                </form>
-              </div>
-    
-              <div class="widget-three">
-                <div class="title-widget justify-content-between d-flex">
-                  <h5>Couleurs</h5>
-                  <h4>-</h4>
-                </div>
-                <ul>
-                  <li class="black"></li>
-                  <li class="blue"></li>
-                  <li class="yellow"></li>
-                  <li class="green"></li>
-                  <li class="cyan"></li>
-                  <li class="orange"></li>
-                  <li class="purple"></li>
-                  <li class="white"></li>
-                  <li class="indigo"></li>
-                  <li class="loom"></li>
-                  <li class="alice"></li>
-                  <li class="orange"></li>
-                  <li class="purple"></li>
-                  <li class="yellow"></li>
-                  <li class="green"></li>
-                  <li class="cyan"></li>
-                  <li class="white"></li>
-                  <li class="indigo"></li>
-                  <li class="loom"></li>
-                  <li class="alice"></li>
-                </ul>
-              </div>
 
-              <div class="widget-four">
-                <div class="title-widget justify-content-between d-flex">
-                  <h5>Dimension</h5>
-                  <h4>-</h4>
-                </div>
 
-                <div class="rang-one">
-                  <div class="label justify-content-between d-flex">
-                    <label for="customRange1" class="form-label">Hauteur</label>
-                    <label for="customRange1" class="form-label">45-75cm</label>
+    
+    <section id="catalog" class="catalog pb-4">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 widget-area">
+              
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item widget-one">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <div class="title-widget justify-content-between d-flex">
+                      <h5>Marque</h5>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><a href="#" class="btn btn-mark">Starck</a></li>
+                      <li><a href="#" class="btn btn-mark">Hay</a></li>
+                      <li><a href="#" class="btn btn-mark">Kartell</a></li>
+                      <li><a href="#" class="btn btn-mark">Veltex</a></li>
+                      <li><a href="#" class="btn btn-mark">Herman Miller</a></li>
+                      <li><a href="#" class="btn btn-mark">Muuto</a></li>
+                    </ul>
                   </div>
-                  <input type="range" class="form-range" id="customRange1">
                 </div>
-                <div class="rang-two">
-                  <div class="label justify-content-between d-flex">
-                    <label for="customRange1" class="form-label">Profondeur</label>
-                    <label for="customRange1" class="form-label">45-75cm</label>
+              </div>
+              <div class="accordion-item widget-two">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <div class="title-widget justify-content-between d-flex">
+                      <h5>Designers</h5>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <form action="#">
+                      <input type="text" class="form-control" placeholder="Recherche..">
+                      <a href="#"><i class="fas fa-search icon-search"></i></a>
+                    </form>
                   </div>
-                  <input type="range" class="form-range" id="customRange1">
                 </div>
-                <div class="rang-one">
-                  <div class="label justify-content-between d-flex">
-                    <label for="customRange1" class="form-label">Largeur</label>
-                    <label for="customRange1" class="form-label">45-75cm</label>
+              </div>
+              <div class="accordion-item widget-three">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <div class="title-widget justify-content-between d-flex">
+                      <h5>Couleurs</h5>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <ul>
+                      <li class="black"></li>
+                      <li class="blue"></li>
+                      <li class="yellow"></li>
+                      <li class="green"></li>
+                      <li class="cyan"></li>
+                      <li class="orange"></li>
+                      <li class="purple"></li>
+                      <li class="white"></li>
+                      <li class="indigo"></li>
+                      <li class="loom"></li>
+                      <li class="alice"></li>
+                      <li class="orange"></li>
+                      <li class="purple"></li>
+                      <li class="yellow"></li>
+                      <li class="green"></li>
+                      <li class="cyan"></li>
+                      <li class="white"></li>
+                      <li class="indigo"></li>
+                      <li class="loom"></li>
+                      <li class="alice"></li>
+                    </ul>
                   </div>
-                  <input type="range" class="form-range" id="customRange1">
                 </div>
-                
+              </div>
+              <div class="accordion-item widget-four">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    <div class="title-widget justify-content-between d-flex">
+                      <h5>Dimension</h5>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    <div class="rang-one">
+                      <div class="label justify-content-between d-flex">
+                        <label for="customRange1" class="form-label">Hauteur</label>
+                        <label for="customRange1" class="form-label">45-75cm</label>
+                      </div>
+                      <input type="range" class="form-range" id="customRange1">
+                    </div>
+                    <div class="rang-two">
+                      <div class="label justify-content-between d-flex">
+                        <label for="customRange1" class="form-label">Profondeur</label>
+                        <label for="customRange1" class="form-label">45-75cm</label>
+                      </div>
+                      <input type="range" class="form-range" id="customRange1">
+                    </div>
+                    <div class="rang-one">
+                      <div class="label justify-content-between d-flex">
+                        <label for="customRange1" class="form-label">Largeur</label>
+                        <label for="customRange1" class="form-label">45-75cm</label>
+                      </div>
+                      <input type="range" class="form-range" id="customRange1">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item widget-five">
+                <h2 class="accordion-header" id="flush-headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    <div class="title-widget justify-content-between d-flex">
+                      <h5>Style</h5>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item widget-six">
+                <h2 class="accordion-header" id="flush-headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    <div class="title-widget justify-content-between d-flex">
+                      <h5>Matière</h5>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item widget-seven">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                    <div class="title-widget justify-content-between d-flex">
+                      <h5>Caractéristiques</h5>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item widget-heigh">
+                <h2 class="accordion-header" id="flush-headingHeigh">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseHeigh" aria-expanded="false" aria-controls="flush-collapseHeigh">
+                    <div class="title-widget justify-content-between d-flex">
+                      <h5>Structures</h5>
+                    </div>
+                  </button>
+                </h2>
+                <div id="flush-collapseHeigh" class="accordion-collapse collapse" aria-labelledby="flush-headingHeigh" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">
+                    
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-lg-9 wrap-shop">
-              <div class="row">
+          </div>
+          <div class="col-lg-9 wrap-shop">
+              <div class="row mt-2">
                 <div class="col-md-4">
                   <div class="title justify-content-between align-items-center d-flex">
                     <div class="link"><i class="fas fa-arrow-left back-link"></i></div>
@@ -169,7 +255,7 @@
               </div>
               <div class="filter-shop-box mb-5">
                 <ul>
-                  <li><a href="#">Catalogue <i class="fas fa-close"></i></a></li>
+                  <li><a href="#">Catalogue</a></li>
                   <li><a href="#">Assises <i class="fas fa-close"></i></a></li>
                   <li><a href="#">Chaises <i class="fas fa-close"></i></a></li>
                 </ul>
@@ -379,10 +465,14 @@
               </div>
               
 
-            </div>
+          </div>
+        </div>
+      </div>
     </section>
+  
+
     <footer id="footer" class="py-4">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-6">
             <div class="title">
@@ -453,12 +543,13 @@
           </div>
           <div class="col-lg-6">
             <div class="toggle-top float-end">
-              <img src="images/up-arrow.png" class="img-fluid" alt="toggle-top">
+              <a id="scrollUp" href="#top"><img src="images/up-arrow.png" class="img-fluid" alt="toggle-top"></a>
             </div>
           </div>
         </div>
       </div>
     </footer>
+
   </main>
 
   <!-----------Script Js------------>
