@@ -600,9 +600,15 @@
 }
 #catalog .widget-area .accordion-button::after {
   background-image: url(./images/icon-plus.jpg) !important;
+  max-width: 100% !important;
+  width: 20px !important;
+  max-height: 100% !important;
 }
 #catalog .widget-area .accordion-button:not(.collapsed)::after {
   background-image: url(./images/icon-small.jpg) !important;
+  max-width: 100% !important;
+  width: 20px !important;
+  max-height: 100% !important;
 }
 
 
@@ -708,12 +714,13 @@
 }
 
 #catalog .widget-four .form-range {
-  height: 1rem !important;
+  height: 1px !important;
 }
 
 #catalog .widget-four .form-range::-webkit-slider-thumb {
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 1px solid #C6C6C6;
+  margin-top: -8px;
 }
 
 #catalog .widget-four .form-range::-moz-range-thumb {
@@ -726,6 +733,34 @@
   border: 1px solid #C6C6C6;
 }
 
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100% !important;
+  height: 1px !important;
+  cursor: pointer !important;
+}
+input[type=range]::-moz-range-track {
+  width: 100% !important;
+  height: 1px !important;
+}
+input[type=range]::-moz-range-thumb {
+  height: 1px !important;
+  width: 100% !important;
+}
+
+  /* CSS is missing in your code  */
+input[type=range]::-ms-track {
+  width: 100% !important;
+  height: 1px !important;
+}
+input[type=range]::-ms-thumb {
+  height: 1px;
+  width: 100% !important;
+}
 
 
 #catalog .wrap-shop h2 {
