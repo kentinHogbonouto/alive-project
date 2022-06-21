@@ -147,7 +147,7 @@
   #banner .carousel-inner{
     position: relative;
     background-size: cover;
-    z-index: -999;
+    z-index: 999;
   }
   #banner .carousel-inner span {
     position: absolute;

@@ -12,6 +12,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+  
+  <!-- Select2
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
 </head>
 <body>
   <main>
@@ -107,7 +111,12 @@
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <form action="#">
-                      <input type="text" class="form-control" placeholder="Recherche..">
+                      <input type="text" class="form-control" id="search-chaise">
+                        <!-- <option value="">Selectionnez une chaise</option>
+                        <option value="">chaise hypolite light</option>
+                        <option value="">chaise hypolite soft</option>
+                        <option value="">chaise hypolite bold</option>
+                      </select> -->
                       <a href="#"><i class="fas fa-search icon-search"></i></a>
                     </form>
                   </div>
@@ -550,5 +559,13 @@
   <script src="./js/owl.carousel.min.js"></script>
   <script src="font/js/all.min.js"></script>
   <script src="js/main.js"></script>
+  <!-- <script>
+    $(document).ready(function(){
+      $('#search-chaise').select2({
+        placeholder: 'This is my placeholder',
+        allowClear: true
+      });
+    });
+  </script> -->
 </body>
 </html>
