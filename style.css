@@ -995,9 +995,19 @@ input[type=range]::-ms-thumb {
   border-radius: 50% !important;
   margin-right: 1rem !important;
 }
-
-
-
+.select2{
+  width: 294px !important;
+}
+.select2-selection__arrow{
+  display: none !important;
+}
+.select2-selection{
+  height: 36px !important;
+  border-radius: 20px !important;
+}
+.select2-search__field{
+  outline: none !important;
+}
 
 
 
