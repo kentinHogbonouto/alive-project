@@ -70,35 +70,30 @@
                     <img src="images/shopping.png" class="img-fluid" alt="" />
                   </a>
                 </li>
-
-                <li class="nav-item">
-                  <div id="myOverlay" class="overlay">
-                    <span
-                      class="closebtn"
-                      onclick="closeSearch()"
-                      title="Close Overlay"
-                      >×</span
-                    >
-                    <div class="overlay-content">
-                      <form action="#">
-                        <input type="text" placeholder="Recherche.." />
-                        <a href="#"
-                          ><i class="fas fa-arrow-right icon-search"></i
-                        ></a>
-                      </form>
-                    </div>
-                  </div>
-                  <a class="icon-market-search openBtn" onclick="openSearch()">
-                    <img
-                      src="images/search.png"
-                      class="img-fluid ml-4"
-                      alt=""
-                    />
-                  </a>
-                </li>
               </ul>
+              
             </div>
           </div>
+          <a class="search-bar">
+            <div id="myOverlay" class="overlay">
+              <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+              <div class="overlay-content">
+                <form action="#">
+                  <input type="text" placeholder="Recherche.." />
+                  <a href="#"
+                    ><i class="fas fa-arrow-right icon-search"></i
+                  ></a>
+                </form>
+              </div>
+            </div>
+            <a class="icon-market-search openBtn" onclick="openSearch()">
+              <img
+                src="images/search.png"
+                class="img-fluid ml-4"
+                alt=""
+              />
+            </a>
+          </a>
         </nav>
       </header>
       <section id="banner">
@@ -134,8 +129,10 @@
                     ></button>
                   </div>
                   <div class="carousel-inner">
-                    <a href="#">Voir</a>
-                    <h1>Catalogue Produits</h1>
+                    <div class="content">
+                      <a class="link" href="catalogue.html">Voir</a>
+                      <h1>Catalogue Produits</h1>
+                    </div>
                     <a href="#" class="btn btn-slide" style="cursor: pointer;">Découvrir</a>
                     <div class="carousel-item active">
                       <img
