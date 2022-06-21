@@ -718,8 +718,12 @@
   z-index: 999;
   color: #000000;
 }
-
-
+.icon-market-search{
+  cursor: pointer;
+}
+.icon-market{
+  cursor: pointer;
+}
 #catalog .widget-three ul {
   list-style: none;
   padding: 0;
@@ -1188,7 +1192,12 @@ input[type=range]::-ms-thumb {
 .position-fixed-one{
   position: fixed;
 }
-
+.btn-more-agenda{
+  margin-top: 11rem;
+}
+.wrap-shop div div title{
+  width: calc(30vw - 10%);
+}
 @media (min-width: 601px) and (max-width: 782.98px) {
   header .navbar .navbar-nav .icon-market-search img {
     margin-left: 0px !important;
@@ -1225,6 +1234,12 @@ input[type=range]::-ms-thumb {
   #single-product .pull-right::before {
     display: none;
   }
+  .btn-more-agenda{
+    margin-top: 6rem;
+  }
+  .pos-static-mb{
+    position: initial !important;
+  }
 }
 @media (min-width: 783px) {
   
@@ -1240,6 +1255,9 @@ input[type=range]::-ms-thumb {
   }
   #features-two .feature-content .btn-more {
     margin-top: 4rem;
+  }
+  .btn-more-agenda{
+    margin-top: 6rem;
   }
   #footer {
     text-align: left !important;
@@ -1266,8 +1284,13 @@ input[type=range]::-ms-thumb {
   #single-product .pull-right::before {
     display: none;
   }
+  .pos-static-mb{
+    position: initial !important;
+  }
 }
-
+.wrap-shop div div .title{
+  width: 300px;
+} 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   #banner .carousel-inner .btn-slide {
