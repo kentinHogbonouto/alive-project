@@ -314,7 +314,9 @@
   border: 2px solid #C6C6C6;
   border-radius: 18px;
 }
-
+.catalog-content{
+  width: 516px !important;
+}
 /*********************************
       Catalogue
 *********************************/
@@ -978,8 +980,17 @@ input[type=range]::-ms-thumb {
   font: normal normal 600 15px/22px Poppins;
   color: #000000;
 }
-
-
+.link-round{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: transparent !important;
+  width: 50px !important;
+  height: 50px !important;
+  border: 1px solid #000000 !important;
+  border-radius: 50% !important;
+  margin-right: 1rem !important;
+}
 
 
 
@@ -1097,7 +1108,6 @@ input[type=range]::-ms-thumb {
 
 
 
-
 /**
  * 4.0 Media Queries
  * ----------------------------------------------------------------------------
@@ -1168,8 +1178,16 @@ input[type=range]::-ms-thumb {
   #single-product .pull-right::before {
     display: none;
   }
+  .pos-static-mb{
+    position: initial !important;
+  }
+  .filter-shop-box ul{
+    display: none !important;
+  }
 }
-
+.position-fixed-one{
+  position: fixed;
+}
 
 @media (min-width: 601px) and (max-width: 782.98px) {
   header .navbar .navbar-nav .icon-market-search img {

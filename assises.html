@@ -1,224 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alive - Assises</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="font/css/all.min.css">
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
-</head>
-<body>
-  <main>
-    <header id="header" class="header sticky-top top">
-      <nav class="navbar navbar-expand-lg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alive - Assises</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="font/css/all.min.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header id="header" class="header sticky-top top">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"
+              ><img src="images/logo.JPG" class="img-fluid" alt="logo"
+            /></a>
+            <button
+              class="navbar-toggler shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="catalogue.html">Catalogue</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Nouveautés</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Eco-Green</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Inspiration</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Agenda</a>
+                </li>
+                <li class="nav-item">
+                  <div id="mySidenav" class="sidenav">
+                    <a
+                      href="javascript:void(0)"
+                      class="closebtn"
+                      onclick="closeNav()"
+                      >&times;</a
+                    >
+                    <h3>Mon Panier</h3>
+                  </div>
+                  <a class="icon-market" onclick="openNav()">
+                    <img src="images/shopping.png" class="img-fluid" alt="" />
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <div id="myOverlay" class="overlay">
+                    <span
+                      class="closebtn"
+                      onclick="closeSearch()"
+                      title="Close Overlay"
+                      >×</span
+                    >
+                    <div class="overlay-content">
+                      <form action="#">
+                        <input type="text" placeholder="Recherche..." />
+                        <a href="#"
+                          ><i class="fas fa-arrow-right icon-search"></i
+                        ></a>
+                      </form>
+                    </div>
+                  </div>
+                  <a class="icon-market-search openBtn" onclick="openSearch()">
+                    <img
+                      src="images/search.png"
+                      class="img-fluid ml-4"
+                      alt=""
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section id="catalogue-title" class="py-7">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="images/logo.JPG" class="img-fluid" alt="logo"></a>
-          <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="catalogue.html">Catalogue</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nouveautés</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Eco-Green</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Inspiration</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Agenda</a>
-              </li>
-              <li class="nav-item">
-                <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <h3>Mon Panier</h3>
-                </div>
-                <a class="icon-market" onclick="openNav()">
-                  <img src="images/shopping.png" class="img-fluid" alt="">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="d-flex align-items-center">
+                <a href="#" class="link link-round text-decoration-none text-dark">
+                  <svg
+                    class="svg-inline--fa fa-arrow-left back-link"
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="arrow-left"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    data-fa-i2svg=""
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"
+                    ></path></svg>
+                  <!-- <i class="fas fa-arrow-left back-link"></i> Font Awesome fontawesome.com -->
                 </a>
-              </li>
-              <li class="nav-item">
-                <div id="myOverlay" class="overlay">
-                  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-                  <div class="overlay-content">
-                    <form action="#">
-                      <input type="text" placeholder="Recherche...">
-                      <a href="#"><i class="fas fa-arrow-right icon-search"></i></a>
-                    </form>
+                <h1>Assises</h1>
+              </div>
+              <a href="catalogue.html" class="btn btn-filter">Catalogue</a>
+              <a href="assises.html" class="btn btn-filter"
+                >Assises <i class="fas fa-close ml-2"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="assises" class="py-4">
+        <div class="container-fluid">
+          <div class="row owl-carousel owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+              <div class="owl-stage">
+                <div class="col-lg-3 owl-item">
+                  <div class="assises-img">
+                    <img src="images/a-1.jpg" class="img-fluid" alt="" />
+                    <div class="assises-content">
+                      <h3>Chaises</h3>
+                      <a href="#" class="arrow-shop"
+                        ><img
+                          src="images/right-arrow.png"
+                          class="img-fluid"
+                          alt="shop-alive-cataloge"
+                      /></a>
+                    </div>
                   </div>
                 </div>
-                <a class="icon-market-search openBtn" onclick="openSearch()">
-                  <img src="images/search.png" class="img-fluid ml-4" alt="">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <section id="catalogue-title" class="py-7">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Assises</h1>
-            <a href="catalogue.html" class="btn btn-filter">Catalogue</a>
-            <a href="assises.html" class="btn btn-filter">Assises <i class="fas fa-close ml-2"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="assises" class="py-4">
-      <div class="container-fluid">
-        <div class="row owl-carousel owl-theme owl-loaded">
-            <div class="owl-stage-outer">
-                <div class="owl-stage">
-                    <div class="col-lg-3 owl-item">
-                      <div class="assises-img">
-                        <img src="images/a-1.jpg" class="img-fluid" alt="">
-                        <div class="assises-content">
-                          <h3>Chaises</h3>
-                          <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="shop-alive-cataloge"></a>
-                        </div>
-                      </div>
+                <div class="col-lg-3 owl-item">
+                  <div class="assises-img">
+                    <img src="images/a-2.jpg" class="img-fluid" alt="" />
+                    <div class="assises-content">
+                      <h3>Fauteuil</h3>
+                      <a href="#" class="arrow-shop"
+                        ><img
+                          src="images/right-arrow.png"
+                          class="img-fluid"
+                          alt="shop-alive-cataloge"
+                      /></a>
                     </div>
-                    <div class="col-lg-3 owl-item">
-                      <div class="assises-img">
-                        <img src="images/a-2.jpg" class="img-fluid" alt="">
-                        <div class="assises-content">
-                          <h3>Fauteuil</h3>
-                          <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="shop-alive-cataloge"></a>
-                        </div>
-                      </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 owl-item">
+                  <div class="assises-img">
+                    <img src="images/a-3.jpg" class="img-fluid" alt="" />
+                    <div class="assises-content">
+                      <h3>Canapés & Lounge</h3>
+                      <a href="#" class="arrow-shop"
+                        ><img
+                          src="images/right-arrow.png"
+                          class="img-fluid"
+                          alt="shop-alive-cataloge"
+                      /></a>
                     </div>
-                    <div class="col-lg-3 owl-item">
-                      <div class="assises-img">
-                        <img src="images/a-3.jpg" class="img-fluid" alt="">
-                        <div class="assises-content">
-                          <h3>Canapés & Lounge</h3>
-                          <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="shop-alive-cataloge"></a>
-                        </div>
-                      </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 owl-item">
+                  <div class="assises-img">
+                    <img src="images/a-4.jpg" class="img-fluid" alt="" />
+                    <div class="assises-content">
+                      <h3>
+                        Tabourets & Tabourets <br />
+                        de bar
+                      </h3>
+                      <a href="#" class="arrow-shop"
+                        ><img
+                          src="images/right-arrow.png"
+                          class="img-fluid"
+                          alt="shop-alive-cataloge"
+                      /></a>
                     </div>
-                    <div class="col-lg-3 owl-item">
-                      <div class="assises-img">
-                        <img src="images/a-4.jpg" class="img-fluid" alt="">
-                        <div class="assises-content">
-                          <h3>Tabourets & Tabourets <br> de bar</h3>
-                          <a href="#" class="arrow-shop"><img src="images/right-arrow.png" class="img-fluid" alt="shop-alive-cataloge"></a>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
                 </div>
-            </div>
-            
-        </div>
-      </div>
-    </section>
-    <section class="position-relative">
-      <footer id="footer" class="py-4 position-absolute" style="width: 100%;">
-        <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-lg-6">
-              <div class="title">
-                <h2>Le group Alive</h2>
-                <h2>Qui sommes nous ?</h2>
-              </div>
-              <a href="#" class="btn btn-about mt-2 mb-2">A propos</a>
-            </div>
-            <div class="col-lg-6">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Votre E-mail">
-                <span class="input-group-text">S'inscrire</span>
-              </div>
-            </div>
-          </div>
-          <div class="row pt-10">
-            <div class="col-lg-2">
-              <ul class="halls">
-                <li><a href="#">Lille</a></li>
-                <li><a href="#">Paris Nord</a></li>
-                <li><a href="#">Paris Sud</a></li>
-                <li><a href="#">Angera</a></li>
-                <li><a href="#">Lyon</a></li>
-                <li><a href="#">Cannes</a></li>
-                <li><a href="#">Louisiane</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3">
-              <div class="infos">
-                <div class="address">
-                  <h4>Agence de Lille</h4>
-                  <p>119 chaussée Marcelin Berthelot 59200 Tourcoing</p>
-                </div>
-                <div class="phone">
-                  <h4>+33(0)3 20 11 29 29</h4>
-                </div>
-                <div class="ref">
-                  <h3>Votre contact référence:</h3>
-                  <p>Remy RIGGI <br> r.riggi@alive-exhibition.fr <br> 06 46 24 80 48</p>
-                </div>
-              </div>
-            </div>
-            <div class="offset-1 col-lg-3">
-              <ul class="terms">
-                <li><a href="#">Notre politique RSE</a></li>
-                <li><a href="#">Nos Engagement</a></li>
-                <li><a href="#">Nos valeurs</a></li>
-                <li><a href="#">Mentions légales</a></li>
-              </ul>
-              <h5>Nous suivre</h5>
-              <ul class="social">
-                <li><a href="#"><i class="fab fa-facebook icon"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin icon"></i></a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3">
-              <ul class="terms">
-                <li><a href="#">Actualités et revue de Presse</a></li>
-                <li><a href="#">Banque d'image</a></li>
-                <li><a href="#">FAQ</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="row pt-10">
-            <div class="col-lg-6 d-flex align-items-center">
-              <p>Alive Group - All Right Reserved ©2022</p>
-            </div>
-            <div class="col-lg-6">
-              <div class="toggle-top float-end">
-                <a id="scrollUp" href="#top"><img src="images/up-arrow.png" class="img-fluid" alt="toggle-top"></a>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-    </section>
-  </main>
-  <!-----------Plugin Owl Carousel------->
- <script type="text/javascript">
-   $(document).ready(function(){
-    $(".owl-carousel").owlCarousel();
-  });
- </script>
-  <!-----------Script Js------------>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="font/js/all.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
+      </section>
+      <section class="position-relative">
+        <footer id="footer" class="py-4 position-absolute" style="width: 100%">
+          <div class="container">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-lg-6">
+                <div class="title">
+                  <h2>Le group Alive</h2>
+                  <h2>Qui sommes nous ?</h2>
+                </div>
+                <a href="#" class="btn btn-about mt-2 mb-2">A propos</a>
+              </div>
+              <div class="col-lg-6">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control shadow-none"
+                    placeholder="Votre E-mail"
+                  />
+                  <button class="input-group-text shadow-none">
+                    S'inscrire
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-10">
+              <div class="col-lg-2">
+                <ul class="halls">
+                  <li><a href="#">Lille</a></li>
+                  <li><a href="#">Paris Nord</a></li>
+                  <li><a href="#">Paris Sud</a></li>
+                  <li><a href="#">Angera</a></li>
+                  <li><a href="#">Lyon</a></li>
+                  <li><a href="#">Cannes</a></li>
+                  <li><a href="#">Louisiane</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3">
+                <div class="infos">
+                  <div class="address">
+                    <h4>Agence de Lille</h4>
+                    <p>119 chaussée Marcelin Berthelot 59200 Tourcoing</p>
+                  </div>
+                  <div class="phone">
+                    <h4>+33(0)3 20 11 29 29</h4>
+                  </div>
+                  <div class="ref">
+                    <h3>Votre contact référence:</h3>
+                    <p>
+                      Remy RIGGI <br />
+                      r.riggi@alive-exhibition.fr <br />
+                      06 46 24 80 48
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="offset-1 col-lg-3">
+                <ul class="terms">
+                  <li><a href="#">Notre politique RSE</a></li>
+                  <li><a href="#">Nos Engagement</a></li>
+                  <li><a href="#">Nos valeurs</a></li>
+                  <li><a href="#">Mentions légales</a></li>
+                </ul>
+                <h5>Nous suivre</h5>
+                <ul class="social">
+                  <li>
+                    <a href="#"><i class="fab fa-facebook icon"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-instagram icon"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin icon"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3">
+                <ul class="terms">
+                  <li><a href="#">Actualités et revue de Presse</a></li>
+                  <li><a href="#">Banque d'image</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row pt-10">
+              <div class="col-lg-6 d-flex align-items-center">
+                <p>Alive Group - All Right Reserved ©2022</p>
+              </div>
+              <div class="col-lg-6">
+                <div class="toggle-top float-end">
+                  <a id="scrollUp" href="#top"
+                    ><img
+                      src="images/up-arrow.png"
+                      class="img-fluid"
+                      alt="toggle-top"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </main>
+    <!-----------Plugin Owl Carousel------->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+      });
+    </script>
+    <!-----------Script Js------------>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="font/js/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
