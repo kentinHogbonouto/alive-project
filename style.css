@@ -1138,7 +1138,7 @@ input[type=range]::-ms-thumb {
   }
   #banner .carousel-inner h1 {
     font: normal normal 600 20px/14px Poppins;
-    padding: 3rem 2rem;
+    padding: 0rem 2rem;
     line-height: 1;
   }
   #banner .carousel-inner .btn-slide {
@@ -1177,6 +1177,10 @@ input[type=range]::-ms-thumb {
   }
   #features-two .feature-img-agenda {
     margin-bottom: 2rem !important;
+  }
+  #banner .carousel-inner .link {
+    padding-top:1rem !important ;
+    padding-left: 2rem !important;
   }
   #footer {
     text-align: left !important;
@@ -1218,7 +1222,7 @@ input[type=range]::-ms-thumb {
   }
   #banner .carousel-inner h1 {
     font: normal normal 600 30px/14px Poppins;
-    padding: 3rem 2rem;
+    padding: 0rem 2rem;
     line-height: 1;
   }
   #features .feature-single {
