@@ -1302,7 +1302,7 @@ input[type=range]::-ms-thumb {
   #header .icon-market-search img {
     margin-top: -5rem;
     z-index: 999;
-    margin-left: 24rem !important;
+    margin-left: calc(100vw - 8rem) !important;
   }
 }
 .wrap-shop div div .title{

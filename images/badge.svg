@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Eco_-_Green" data-name="Eco - Green" width="22.446" height="22.447" viewBox="0 0 22.446 22.447"><script>(
+            function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}
+          )();</script>
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_269" data-name="Rectangle 269" width="22.446" height="22.447" fill="#009d12"/>
+    </clipPath>
+  </defs>
+  <g id="Group_65" data-name="Group 65" clip-path="url(#clip-path)">
+    <path id="Path_80" data-name="Path 80" d="M79.747,0A11.257,11.257,0,0,0,72.9,2.331L72.9.4a.4.4,0,0,0-.4-.4.4.4,0,0,0-.4.4L72.1,3.178a.4.4,0,0,0,.4.4l2.766.006a.4.4,0,0,0,.284-.685.4.4,0,0,0-.284-.118l-1.628,0A10.421,10.421,0,0,1,88.387,17.049a.4.4,0,0,0,.108.557l.022.015h0a.4.4,0,0,0,.532-.124A11.225,11.225,0,0,0,79.747,0" transform="translate(-68.524)" fill="#009d12"/>
+    <path id="Path_81" data-name="Path 81" d="M18.449,110.4H15.684a.4.4,0,1,0,0,.8h1.645A10.42,10.42,0,0,1,2.582,96.931a.4.4,0,0,0-.108-.557h0a.4.4,0,0,0-.557.108A11.224,11.224,0,0,0,18.05,111.665l0,1.915a.4.4,0,1,0,.8,0l-.006-2.782a.4.4,0,0,0-.4-.4" transform="translate(0 -91.534)" fill="#009d12"/>
+    <path id="Path_82" data-name="Path 82" d="M133.651,86.051a.4.4,0,0,0,.4-.4V84.024a4.942,4.942,0,0,0,4.445-4.98c0-3.689-4.376-7.865-4.562-8.041a.4.4,0,0,0-.556,0c-.186.182-4.561,4.5-4.562,8.039a5.053,5.053,0,0,0,1.412,3.532,4.755,4.755,0,0,0,3.021,1.446v1.626a.4.4,0,0,0,.259.376l0,.026Zm-2.37-11.231A22.978,22.978,0,0,1,133.26,72.3l0,4.393Zm-1.424,2.817a9.971,9.971,0,0,1,.987-2.125l2.412,2.291,0,3.06Zm-.235,1.409a3.845,3.845,0,0,1,.033-.494l3.6,3.417v1.25a3.962,3.962,0,0,1-2.444-1.2,4.254,4.254,0,0,1-1.187-2.974m4.433,4.172V81.976l3.61-3.429a4.071,4.071,0,0,1,.031.5,4.15,4.15,0,0,1-3.642,4.175m0-2.349,0-3.062,2.443-2.32a9.615,9.615,0,0,1,.971,2.138Zm0-4.17,0-4.417a21.3,21.3,0,0,1,2,2.513Z" transform="translate(-122.436 -67.379)" fill="#009d12"/>
+  </g>
+</svg>

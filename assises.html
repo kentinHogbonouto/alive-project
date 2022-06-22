@@ -57,6 +57,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Agenda</a>
                 </li>
+
                 <li class="nav-item">
                   <div id="mySidenav" class="sidenav">
                     <a
@@ -71,34 +72,30 @@
                     <img src="images/shopping.png" class="img-fluid" alt="" />
                   </a>
                 </li>
-                <li class="nav-item">
-                  <div id="myOverlay" class="overlay">
-                    <span
-                      class="closebtn"
-                      onclick="closeSearch()"
-                      title="Close Overlay"
-                      >×</span
-                    >
-                    <div class="overlay-content">
-                      <form action="#">
-                        <input type="text" placeholder="Recherche..." />
-                        <a href="#"
-                          ><i class="fas fa-arrow-right icon-search"></i
-                        ></a>
-                      </form>
-                    </div>
-                  </div>
-                  <a class="icon-market-search openBtn" onclick="openSearch()">
-                    <img
-                      src="images/search.png"
-                      class="img-fluid ml-4"
-                      alt=""
-                    />
-                  </a>
-                </li>
               </ul>
+              
             </div>
           </div>
+          <a class="search-bar">
+            <div id="myOverlay" class="overlay">
+              <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+              <div class="overlay-content">
+                <form action="#">
+                  <input type="text" placeholder="Recherche.." />
+                  <a href="#"
+                    ><i class="fas fa-arrow-right icon-search"></i
+                  ></a>
+                </form>
+              </div>
+            </div>
+            <a class="icon-market-search openBtn" onclick="openSearch()">
+              <img
+                src="images/search.png"
+                class="img-fluid ml-4"
+                alt=""
+              />
+            </a>
+          </a>
         </nav>
       </header>
       <section id="catalogue-title" class="py-7">
