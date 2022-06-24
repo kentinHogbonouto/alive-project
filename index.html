@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic" />
+    <!--algolia search script-->
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CObject.entries%2CObject.assign"></script>
   </head>
   <body>
     <main>
@@ -79,7 +84,7 @@
               <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
               <div class="overlay-content">
                 <form action="#">
-                  <input type="text" placeholder="Recherche.." />
+                  <div id="autocomplete"></div>
                   <a href="#"
                     ><i class="fas fa-arrow-right icon-search"></i
                   ></a>
@@ -358,4 +363,9 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="font/js/all.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      const { autocomplete, getAlgoliaResults } = window['@algolia/autocomplete-js'];
+    </script>
+    <!-- <script src="./js/algolia.js"></script> -->
+    <script src="./js/custome.js"></script>
 </html>
