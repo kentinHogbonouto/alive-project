@@ -77,7 +77,7 @@ a {
 }
 .overlay-content a .icon-search {
   position: absolute;
-  top: 20px;
+  top: 16px;
   right: 30px;
   color: #000000;
 }
@@ -89,11 +89,24 @@ a {
   cursor: pointer;
   color: #000000;
 }
-
+.aa-Label svg{
+  color: #000;
+}
 .overlay .closebtn:hover {
   color: #000000;
 }
-
+.aa-ItemIcon{
+  height: 150px;
+  width: 150px;
+}
+.aa-ItemIcon img{
+  height: 245px !important;
+  max-height: 245px !important;
+  max-height: 245px !important;
+  max-width: 245px !important;
+  max-width: 245px !important;
+  width: 245px !important;
+} 
 .overlay input[type="text"] {
   padding: 15px;
   font-size: 17px;
@@ -1107,7 +1120,7 @@ input[type="range"]::-ms-thumb {
 
 .aa-Panel {
   z-index: 1267 !important;
-  top: 160.922px !important;
+  top: 205.922px !important;
 }
 
 .aa-Form {
