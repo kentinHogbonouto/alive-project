@@ -5,7 +5,7 @@ const searchClient = algoliasearch(
 
 autocomplete({
   container: '#autocomplete',
-  placeholder: 'Rechercher un produit',
+  placeholder: 'Rechercher',
   getSources({ query }) {
     return [
       {
