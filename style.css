@@ -1122,6 +1122,9 @@ input[type="range"]::-ms-thumb {
   z-index: 1267 !important;
   top: 205.922px !important;
 }
+.aa-ClearIcon{
+  display: none
+}
 
 .aa-Form {
   font-size: 17px !important;
