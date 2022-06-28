@@ -1138,6 +1138,9 @@ input[type="range"]::-ms-thumb {
   box-shadow: none !important;
   outline: none !important;
 }
+.aa-SubmitIcon{
+  color: #000 !important
+}
 /**
  * 4.0 Media Queries
  * ----------------------------------------------------------------------------
@@ -1217,6 +1220,13 @@ input[type="range"]::-ms-thumb {
   }
   .filter-shop-box ul {
     display: none !important;
+  }
+  .overlay-content{
+    margin-left: 3px;
+  }
+  .overlay .closebtn{
+    top: 22px;
+    right: 30px;
   }
 }
 .position-fixed-one {
