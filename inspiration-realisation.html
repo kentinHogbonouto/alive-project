@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alive - Realisation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="font/css/all.min.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"
+    />
+    <!--algolia search script-->
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CObject.entries%2CObject.assign"></script>
+  </head>
+  <body>
+    <header id="header" class="header sticky-top top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img src="images/logo.JPG" class="img-fluid" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="catalogue.html">Catalogue</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nouveautés</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Eco-Green</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inspiration</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Agenda</a>
+              </li>
+
+              <li class="nav-item">
+                <div id="mySidenav" class="sidenav">
+                  <a
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()"
+                    >&times;</a
+                  >
+                  <h3>Mon Panier</h3>
+                </div>
+                <a class="icon-market" onclick="openNav()">
+                  <img src="images/shopping.png" class="img-fluid" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a class="search-bar">
+          <div id="myOverlay" class="overlay">
+            <span class="closebtn" onclick="closeSearch()" title="Close Overlay"
+              >×</span
+            >
+            <div class="overlay-content">
+              <form action="#">
+                <div id="autocomplete"></div>
+                <a href="#"><i class="fas fa-arrow-right icon-search"></i></a>
+              </form>
+            </div>
+          </div>
+          <a class="icon-market-search openBtn" onclick="openSearch()">
+            <img src="images/search.png" class="img-fluid ml-4" alt="" />
+          </a>
+        </a>
+      </nav>
+    </header>
+    <section id="realisation" class="mt-5">
+      <div class="container">
+        <div class="row mt-5 mb-5">
+          <div class="col-lg-12">
+            <h1>Inspirations & Réalisations</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card border-0 realisation-item-box">
+              <div class="card-body border-0 realisation-item-body" style="padding-left: 0px; padding-right: 0px;">
+                <img src="./images/h5-img-1.jpg" alt="" width="100%" height="auto">
+              </div>
+              <div class="card-footer border-0 realisation-item-footer bg-white px-0">
+                <h5>Nom de la réalisation</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                  dapibus fringilla convallis curabitur commodo, cras ad quam
+                  ante mattis velit feugiat urna dis sem quis inceptos, nunc
+                  molestie etiam mauris vehicula maecenas fermentum cum
+                  pellentesque non vulputate dui
+                </p>
+                <a href="#" class="btn realisation-btn">Découvrir</a>
+              </div>
+            </div>
+          </div> 
+          <div class="col-lg-6">
+            <div class="card border-0 realisation-item-box">
+              <div class="card-body border-0 realisation-item-body" style="padding-left: 0px; padding-right: 0px;">
+                <img src="./images/h5-img-3.jpg" alt="" width="100%" height="auto">
+              </div>
+              <div class="card-footer border-0 realisation-item-footer bg-white px-0">
+                <h5>Nom de la réalisation</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                  dapibus fringilla convallis curabitur commodo, cras ad quam
+                  ante mattis velit feugiat urna dis sem quis inceptos, nunc
+                  molestie etiam mauris vehicula maecenas fermentum cum
+                  pellentesque non vulputate dui
+                </p>
+                <a href="#" class="btn realisation-btn">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <div class="card border-0 realisation-item-box">
+              <div class="card-body border-0 realisation-item-body" style="padding-left: 0px; padding-right: 0px;">
+                <img src="./images/h5-img-2.jpg" alt="" width="100%" height="auto">
+              </div>
+              <div class="card-footer border-0 realisation-item-footer bg-white px-0">
+                <h5>Nom de la réalisation</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                  dapibus fringilla convallis curabitur commodo, cras ad quam
+                  ante mattis velit feugiat urna dis sem quis inceptos, nunc
+                  molestie etiam mauris vehicula maecenas fermentum cum
+                  pellentesque non vulputate dui
+                </p>
+                <a href="#" class="btn realisation-btn">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 realisation-item-box">
+              <div class="card-body border-0 realisation-item-body" style="padding-left: 0px; padding-right: 0px;">
+                <img src="./images/h5-img-4.jpg" alt="" width="100%" height="auto">
+              </div>
+              <div class="card-footer border-0 realisation-item-footer bg-white px-0">
+                <h5>Nom de la réalisation</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                  dapibus fringilla convallis curabitur commodo, cras ad quam
+                  ante mattis velit feugiat urna dis sem quis inceptos, nunc
+                  molestie etiam mauris vehicula maecenas fermentum cum
+                  pellentesque non vulputate dui
+                </p>
+                <a href="#" class="btn realisation-btn">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <div class="card border-0 realisation-item-box">
+              <div class="card-body border-0 realisation-item-body" style="padding-left: 0px; padding-right: 0px;">
+                <img src="./images/h5-img-2.jpg" alt="" width="100%" height="auto">
+              </div>
+              <div class="card-footer border-0 realisation-item-footer bg-white px-0">
+                <h5>Nom de la réalisation</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                  dapibus fringilla convallis curabitur commodo, cras ad quam
+                  ante mattis velit feugiat urna dis sem quis inceptos, nunc
+                  molestie etiam mauris vehicula maecenas fermentum cum
+                  pellentesque non vulputate dui
+                </p>
+                <a href="#" class="btn realisation-btn">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 realisation-item-box">
+              <div class="card-body border-0 realisation-item-body" style="padding-left: 0px; padding-right: 0px;">
+                <img src="./images/h5-img-3.jpg" alt="" width="100%" height="auto">
+              </div>
+              <div class="card-footer border-0 realisation-item-footer bg-white px-0">
+                <h5>Nom de la réalisation</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                  dapibus fringilla convallis curabitur commodo, cras ad quam
+                  ante mattis velit feugiat urna dis sem quis inceptos, nunc
+                  molestie etiam mauris vehicula maecenas fermentum cum
+                  pellentesque non vulputate dui
+                </p>
+                <a href="#" class="btn realisation-btn">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <div class="card border-0 realisation-item-box">
+              <div class="card-body border-0 realisation-item-body" style="padding-left: 0px; padding-right: 0px;">
+                <img src="./images/h5-img-4.jpg" alt="" width="100%" height="auto">
+              </div>
+              <div class="card-footer border-0 realisation-item-footer bg-white px-0">
+                <h5>Nom de la réalisation</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                  dapibus fringilla convallis curabitur commodo, cras ad quam
+                  ante mattis velit feugiat urna dis sem quis inceptos, nunc
+                  molestie etiam mauris vehicula maecenas fermentum cum
+                  pellentesque non vulputate dui
+                </p>
+                <a href="#" class="btn realisation-btn">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card border-0 realisation-item-box">
+              <div class="card-body border-0 realisation-item-body" style="padding-left: 0px; padding-right: 0px;">
+                <img src="./images/h5-img-3.jpg" alt="" width="100%" height="auto">
+              </div>
+              <div class="card-footer border-0 realisation-item-footer bg-white px-0">
+                <h5>Nom de la réalisation</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                  dapibus fringilla convallis curabitur commodo, cras ad quam
+                  ante mattis velit feugiat urna dis sem quis inceptos, nunc
+                  molestie etiam mauris vehicula maecenas fermentum cum
+                  pellentesque non vulputate dui
+                </p>
+                <a href="#" class="btn realisation-btn">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="position-relative mt-5">
+      <footer id="footer" class="py-4 position-absolute" style="width: 100%">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6">
+              <div class="title">
+                <h2>Le group Alive</h2>
+                <h2>Qui sommes nous ?</h2>
+              </div>
+              <a href="#" class="btn btn-about mt-2 mb-2">A propos</a>
+            </div>
+            <div class="col-lg-6">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control shadow-none"
+                  placeholder="Votre E-mail"
+                />
+                <button class="input-group-text shadow-none">S'inscrire</button>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-10">
+            <div class="col-lg-2">
+              <ul class="halls">
+                <li><a href="#">Lille</a></li>
+                <li><a href="#">Paris Nord</a></li>
+                <li><a href="#">Paris Sud</a></li>
+                <li><a href="#">Angera</a></li>
+                <li><a href="#">Lyon</a></li>
+                <li><a href="#">Cannes</a></li>
+                <li><a href="#">Louisiane</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <div class="infos">
+                <div class="address">
+                  <h4>Agence de Lille</h4>
+                  <p>119 chaussée Marcelin Berthelot 59200 Tourcoing</p>
+                </div>
+                <div class="phone">
+                  <h4>+33(0)3 20 11 29 29</h4>
+                </div>
+                <div class="ref">
+                  <h3>Votre contact référence:</h3>
+                  <p>
+                    Remy RIGGI <br />
+                    r.riggi@alive-exhibition.fr <br />
+                    06 46 24 80 48
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="offset-1 col-lg-3">
+              <ul class="terms">
+                <li><a href="#">Notre politique RSE</a></li>
+                <li><a href="#">Nos Engagement</a></li>
+                <li><a href="#">Nos valeurs</a></li>
+                <li><a href="#">Mentions légales</a></li>
+              </ul>
+              <h5>Nous suivre</h5>
+              <ul class="social">
+                <li>
+                  <a href="#"><i class="fab fa-facebook icon"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram icon"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin icon"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <ul class="terms">
+                <li><a href="#">Actualités et revue de Presse</a></li>
+                <li><a href="#">Banque d'image</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row pt-10">
+            <div class="col-lg-6 d-flex align-items-center">
+              <p>Alive Group - All Right Reserved ©2022</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="toggle-top float-end">
+                <a id="scrollUp" href="#top"
+                  ><img
+                    src="images/up-arrow.png"
+                    class="img-fluid"
+                    alt="toggle-top"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!-----------Script Js------------>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="font/js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      const { autocomplete, getAlgoliaResults } = window['@algolia/autocomplete-js'];
+    </script>
+    <!-- <script src="./js/algolia.js"></script> -->
+    <script src="./js/custome.js"></script>
+  </body>
+</html>
