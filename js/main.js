@@ -52,3 +52,12 @@ function myFunction(smallImg) {
   fullImg.src = smallImg.src;
 }
 
+const section1 = document.getElementById('banner-realisation');
+let changSectBgColor = document.getElementById("header-realisation");
+
+window.addEventListener('scroll', () => {
+  let y = 1 + (window.scrollY || window.pageYOffset) / 150
+  console.log(y);
+  y = y < 1 ? 1 : y
+  changSectBgColor.style.backgroundColor = `rgb(${255}, ${255}, ${255})`
+})
