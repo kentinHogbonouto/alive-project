@@ -1300,6 +1300,7 @@ input[type="range"]::-ms-thumb {
   text-decoration: underline;
   font: normal normal 600 32px/14px Poppins;
   letter-spacing: 0px;
+  line-height: 26px;
   color: #000000;
   opacity: 1;
   height: 45px;
@@ -1311,9 +1312,18 @@ input[type="range"]::-ms-thumb {
   color: #000000;
   opacity: 1;
 }
-.article-item{
+.article-item .card{
   padding-top: 34.34px;
+  border-radius: 0px !important;
   border-top: 1px solid #E5E5E5 !important;
+}
+.article-item .card-body{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.article-header{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 /**
  * 4.0 Media Queries
